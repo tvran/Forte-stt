@@ -23,6 +23,8 @@ def convert_audio(audio_file_path):
             "16000",  # Resample to 16000 Hz
             "-ac", 
             "1",  # Convert to mono
+            "-af",
+            "aresample=resampler=soxr",
             "-f",
             "wav",  # Output format (WAV)
             converted_file_path  # Specific output file path
