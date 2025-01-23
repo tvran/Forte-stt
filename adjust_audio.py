@@ -21,6 +21,7 @@ def convert_audio(audio_file_path):
             "pcm_s16le",  # Convert to 16-bit PCM
             "-ar",
             "16000",  # Resample to 16000 Hz
+            "-ac", "1",  # Convert to mono
             "-f",
             "wav",  # Output format (WAV)
             converted_file_path  # Specific output file path
