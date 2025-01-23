@@ -1,3 +1,5 @@
+import subprocess
+
 def convert_audio(audio_file_path):
     """
     Converts audio file to standard format for speech recognition
