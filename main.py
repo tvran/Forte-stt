@@ -2,6 +2,7 @@ import streamlit as st
 import os
 from dotenv import load_dotenv
 from requests_aws4auth import AWS4Auth
+import subprocess
 
 from output.adjust_audio import convert_audio
 from output.load_file import upload_to_yandex_storage
@@ -15,6 +16,13 @@ yandex_api_key = os.getenv("yandex_api_key")
 ACCESS_KEY = os.getenv("ACCESS_KEY")
 SECRET_KEY = os.getenv("SECRET_KEY")
 HF_TOKEN = os.getenv("HF_TOKEN")
+
+REPO_URL = "https://github.com/yandex-cloud/cloudapi.git"
+REPO_DIR = "cloudapi"
+
+if not os.path.exists(REPO_DIR):
+    subprocess.run(["git", "clone", REPO_URL], check=True)
+
 
 # Функции для обработки шагов
 def step_1_upload_file():
