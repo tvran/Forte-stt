@@ -32,7 +32,7 @@ def step_1_upload_file():
     with placeholder.container():
         uploaded_file = st.file_uploader("Загрузите аудиофайл (mp3, wav, flac и т.д.)", type=["wav", "mp3", "flac", "aac", "ogg", "m4a"])
         if uploaded_file is not None:
-            local_file = "uploaded_audio.wav"
+            local_file = "uploadedaudio.wav"
             with open(local_file, "wb") as f:
                 f.write(uploaded_file.read())
             st.success("Файл успешно загружен.")

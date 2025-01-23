@@ -8,9 +8,11 @@ def convert_audio(audio_file_path):
         audio_file_path: The path to the input audio file.
 
     Returns:
-        The converted audio data as bytes.
+        The path to the converted audio file.
     """
-    process = subprocess.run(
+    converted_file_path = "converted_audio.wav"
+    
+    subprocess.run(
         [
             "ffmpeg",
             "-i",
@@ -21,13 +23,9 @@ def convert_audio(audio_file_path):
             "16000",  # Resample to 16000 Hz
             "-f",
             "wav",  # Output format (WAV)
-            "-",  # Output to stdout
+            converted_file_path  # Specific output file path
         ],
-        capture_output=True,
         check=True,
     )
 
-    # Get converted audio data from stdout
-    converted_audio = process.stdout
-
-    return converted_audio
+    return converted_file_path
