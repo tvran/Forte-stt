@@ -121,9 +121,10 @@ def step_5_sentiment_analysis(transcribed_text):
             score = result[0]['score']
             
             # Format result string
-            result_str = f"Реплика {i}: {line}\nСентимент: {sentiment} (Уверенность: {score:.2f})\n---"
+            result_str = f"{line} | Сентимент: {sentiment} ({score:.2f})\n"
             results.append(result_str)
-        
+        st.empty()
+        st.write("### Результат:")
         # Display results
         full_results = "\n".join(results)
         st.text_area("Результаты анализа сентиментов", full_results, height=300)
@@ -162,6 +163,5 @@ if input_file:
             transcribed_text, step_4_placeholder = step_4_transcription(endpoint)
             if transcribed_text:
                 step_4_placeholder.empty()  # Очистить элементы интерфейса для шага 4
-
                 # Шаг 5: Анализ сентиментов
                 step_5_placeholder = step_5_sentiment_analysis(transcribed_text) 
