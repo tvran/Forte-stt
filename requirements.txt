@@ -1,0 +1,8 @@
+streamlit
+datetime
+python-dotenv
+grpcio-tools
+requests
+requests-aws4auth 
+protobuf
+transformers

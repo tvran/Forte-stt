@@ -1,0 +1,2201 @@
+[
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "7020",
+            "finalTimeMs": "7020"
+        },
+        "responseWallTimeMs": "1623",
+        "final": {
+            "alternatives": [
+                {
+                    "words": [
+                        {
+                            "text": "әңгімеңіз",
+                            "startTimeMs": "60",
+                            "endTimeMs": "580"
+                        },
+                        {
+                            "text": "жазылады",
+                            "startTimeMs": "620",
+                            "endTimeMs": "1339"
+                        },
+                        {
+                            "text": "разговор",
+                            "startTimeMs": "1439",
+                            "endTimeMs": "1939"
+                        },
+                        {
+                            "text": "записывается",
+                            "startTimeMs": "1979",
+                            "endTimeMs": "2760"
+                        },
+                        {
+                            "text": "қайырлы",
+                            "startTimeMs": "3260",
+                            "endTimeMs": "3540"
+                        },
+                        {
+                            "text": "таң",
+                            "startTimeMs": "3580",
+                            "endTimeMs": "3750"
+                        },
+                        {
+                            "text": "тұрдай",
+                            "startTimeMs": "3780",
+                            "endTimeMs": "4060"
+                        },
+                        {
+                            "text": "хабарласқаныңызға",
+                            "startTimeMs": "4100",
+                            "endTimeMs": "4779"
+                        },
+                        {
+                            "text": "рахмет",
+                            "startTimeMs": "4819",
+                            "endTimeMs": "5140"
+                        },
+                        {
+                            "text": "есмм",
+                            "startTimeMs": "5200",
+                            "endTimeMs": "5440"
+                        },
+                        {
+                            "text": "ауыра",
+                            "startTimeMs": "5640",
+                            "endTimeMs": "5839"
+                        },
+                        {
+                            "text": "сзд",
+                            "startTimeMs": "5879",
+                            "endTimeMs": "6040"
+                        },
+                        {
+                            "text": "алай",
+                            "startTimeMs": "6120",
+                            "endTimeMs": "6220"
+                        },
+                        {
+                            "text": "атасам",
+                            "startTimeMs": "6279",
+                            "endTimeMs": "6580"
+                        },
+                        {
+                            "text": "болады",
+                            "startTimeMs": "6620",
+                            "endTimeMs": "6940"
+                        },
+                        {
+                            "text": "а",
+                            "startTimeMs": "6960",
+                            "endTimeMs": "7020"
+                        }
+                    ],
+                    "text": "әңгімеңіз жазылады разговор записывается қайырлы таң тұрдай хабарласқаныңызға рахмет есмм ауыра сзд алай атасам болады а",
+                    "endTimeMs": "7020",
+                    "languages": [
+                        {
+                            "languageCode": "kk-KK",
+                            "probability": 0.7794036865234375
+                        },
+                        {
+                            "languageCode": "ru-RU",
+                            "probability": 0.2205963432788849
+                        }
+                    ]
+                }
+            ],
+            "channelTag": "1"
+        },
+        "channelTag": "1"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "7020",
+            "finalTimeMs": "7020"
+        },
+        "responseWallTimeMs": "1624",
+        "finalRefinement": {
+            "normalizedText": {
+                "alternatives": [
+                    {
+                        "words": [
+                            {
+                                "text": "әңгімеңіз",
+                                "startTimeMs": "60",
+                                "endTimeMs": "580"
+                            },
+                            {
+                                "text": "жазылады",
+                                "startTimeMs": "620",
+                                "endTimeMs": "1339"
+                            },
+                            {
+                                "text": "разговор",
+                                "startTimeMs": "1439",
+                                "endTimeMs": "1939"
+                            },
+                            {
+                                "text": "записывается",
+                                "startTimeMs": "1979",
+                                "endTimeMs": "2760"
+                            },
+                            {
+                                "text": "қайырлы",
+                                "startTimeMs": "3260",
+                                "endTimeMs": "3540"
+                            },
+                            {
+                                "text": "таң",
+                                "startTimeMs": "3580",
+                                "endTimeMs": "3750"
+                            },
+                            {
+                                "text": "тұрдай",
+                                "startTimeMs": "3780",
+                                "endTimeMs": "4060"
+                            },
+                            {
+                                "text": "хабарласқаныңызға",
+                                "startTimeMs": "4100",
+                                "endTimeMs": "4779"
+                            },
+                            {
+                                "text": "рахмет",
+                                "startTimeMs": "4819",
+                                "endTimeMs": "5140"
+                            },
+                            {
+                                "text": "есмм",
+                                "startTimeMs": "5200",
+                                "endTimeMs": "5440"
+                            },
+                            {
+                                "text": "ауыра",
+                                "startTimeMs": "5640",
+                                "endTimeMs": "5839"
+                            },
+                            {
+                                "text": "сзд",
+                                "startTimeMs": "5879",
+                                "endTimeMs": "6040"
+                            },
+                            {
+                                "text": "алай",
+                                "startTimeMs": "6120",
+                                "endTimeMs": "6220"
+                            },
+                            {
+                                "text": "атасам",
+                                "startTimeMs": "6279",
+                                "endTimeMs": "6580"
+                            },
+                            {
+                                "text": "болады",
+                                "startTimeMs": "6620",
+                                "endTimeMs": "6940"
+                            },
+                            {
+                                "text": "а",
+                                "startTimeMs": "6960",
+                                "endTimeMs": "7020"
+                            }
+                        ],
+                        "text": "әңгімеңіз жазылады разговор записывается қайырлы таң тұрдай хабарласқаныңызға рахмет есмм ауыра сзд алай атасам болады а",
+                        "endTimeMs": "7020",
+                        "languages": [
+                            {
+                                "languageCode": "kk-KK",
+                                "probability": 0.7794036865234375
+                            },
+                            {
+                                "languageCode": "ru-RU",
+                                "probability": 0.2205963432788849
+                            }
+                        ]
+                    }
+                ],
+                "channelTag": "1"
+            }
+        },
+        "channelTag": "1"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "7020",
+            "finalTimeMs": "7020",
+            "eouTimeMs": "7020"
+        },
+        "responseWallTimeMs": "1624",
+        "eouUpdate": {
+            "timeMs": "7020"
+        },
+        "channelTag": "1"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "11740",
+            "finalTimeMs": "11740"
+        },
+        "responseWallTimeMs": "1624",
+        "final": {
+            "alternatives": [
+                {
+                    "words": [
+                        {
+                            "text": "слеметсз",
+                            "startTimeMs": "7870",
+                            "endTimeMs": "8400"
+                        },
+                        {
+                            "text": "бе",
+                            "startTimeMs": "8440",
+                            "endTimeMs": "8929"
+                        },
+                        {
+                            "text": "мен",
+                            "startTimeMs": "9099",
+                            "endTimeMs": "9370"
+                        },
+                        {
+                            "text": "анар",
+                            "startTimeMs": "9929",
+                            "endTimeMs": "10200"
+                        },
+                        {
+                            "text": "сенбаевна",
+                            "startTimeMs": "10240",
+                            "endTimeMs": "11200"
+                        },
+                        {
+                            "text": "сасан",
+                            "startTimeMs": "11420",
+                            "endTimeMs": "11740"
+                        }
+                    ],
+                    "text": "слеметсз бе мен анар сенбаевна сасан",
+                    "endTimeMs": "11740",
+                    "languages": [
+                        {
+                            "languageCode": "kk-KK",
+                            "probability": 0.7654993534088135
+                        },
+                        {
+                            "languageCode": "ru-RU",
+                            "probability": 0.2345006763935089
+                        }
+                    ]
+                }
+            ],
+            "channelTag": "0"
+        },
+        "channelTag": "0"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "11740",
+            "finalTimeMs": "11740"
+        },
+        "responseWallTimeMs": "1624",
+        "finalRefinement": {
+            "normalizedText": {
+                "alternatives": [
+                    {
+                        "words": [
+                            {
+                                "text": "слеметсз",
+                                "startTimeMs": "7870",
+                                "endTimeMs": "8400"
+                            },
+                            {
+                                "text": "бе",
+                                "startTimeMs": "8440",
+                                "endTimeMs": "8929"
+                            },
+                            {
+                                "text": "мен",
+                                "startTimeMs": "9099",
+                                "endTimeMs": "9370"
+                            },
+                            {
+                                "text": "анар",
+                                "startTimeMs": "9929",
+                                "endTimeMs": "10200"
+                            },
+                            {
+                                "text": "сенбаевна",
+                                "startTimeMs": "10240",
+                                "endTimeMs": "11200"
+                            },
+                            {
+                                "text": "сасан",
+                                "startTimeMs": "11420",
+                                "endTimeMs": "11740"
+                            }
+                        ],
+                        "text": "слеметсз бе мен анар сенбаевна сасан",
+                        "endTimeMs": "11740",
+                        "languages": [
+                            {
+                                "languageCode": "kk-KK",
+                                "probability": 0.7654993534088135
+                            },
+                            {
+                                "languageCode": "ru-RU",
+                                "probability": 0.2345006763935089
+                            }
+                        ]
+                    }
+                ],
+                "channelTag": "0"
+            }
+        },
+        "channelTag": "0"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "11740",
+            "finalTimeMs": "11740",
+            "eouTimeMs": "11740"
+        },
+        "responseWallTimeMs": "1624",
+        "eouUpdate": {
+            "timeMs": "11740"
+        },
+        "channelTag": "0"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "12300",
+            "finalTimeMs": "12300",
+            "finalIndex": "1",
+            "eouTimeMs": "7020"
+        },
+        "responseWallTimeMs": "1624",
+        "final": {
+            "alternatives": [
+                {
+                    "words": [
+                        {
+                            "text": "мааншты",
+                            "startTimeMs": "11759",
+                            "endTimeMs": "12219"
+                        },
+                        {
+                            "text": "ма",
+                            "startTimeMs": "12240",
+                            "endTimeMs": "12300"
+                        }
+                    ],
+                    "text": "мааншты ма",
+                    "startTimeMs": "7020",
+                    "endTimeMs": "12300",
+                    "languages": [
+                        {
+                            "languageCode": "kk-KK",
+                            "probability": 0.5968896746635437
+                        },
+                        {
+                            "languageCode": "ru-RU",
+                            "probability": 0.4031103551387787
+                        }
+                    ]
+                }
+            ],
+            "channelTag": "1"
+        },
+        "channelTag": "1"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "12300",
+            "finalTimeMs": "12300",
+            "finalIndex": "1",
+            "eouTimeMs": "7020"
+        },
+        "responseWallTimeMs": "1624",
+        "finalRefinement": {
+            "finalIndex": "1",
+            "normalizedText": {
+                "alternatives": [
+                    {
+                        "words": [
+                            {
+                                "text": "мааншты",
+                                "startTimeMs": "11759",
+                                "endTimeMs": "12219"
+                            },
+                            {
+                                "text": "ма",
+                                "startTimeMs": "12240",
+                                "endTimeMs": "12300"
+                            }
+                        ],
+                        "text": "мааншты ма",
+                        "startTimeMs": "7020",
+                        "endTimeMs": "12300",
+                        "languages": [
+                            {
+                                "languageCode": "kk-KK",
+                                "probability": 0.5968896746635437
+                            },
+                            {
+                                "languageCode": "ru-RU",
+                                "probability": 0.4031103551387787
+                            }
+                        ]
+                    }
+                ],
+                "channelTag": "1"
+            }
+        },
+        "channelTag": "1"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "12300",
+            "finalTimeMs": "12300",
+            "finalIndex": "1",
+            "eouTimeMs": "12300"
+        },
+        "responseWallTimeMs": "1625",
+        "eouUpdate": {
+            "timeMs": "12300"
+        },
+        "channelTag": "1"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "18960",
+            "finalTimeMs": "18960",
+            "finalIndex": "1",
+            "eouTimeMs": "11740"
+        },
+        "responseWallTimeMs": "1625",
+        "final": {
+            "alternatives": [
+                {
+                    "words": [
+                        {
+                            "text": "кредит",
+                            "startTimeMs": "13059",
+                            "endTimeMs": "13519"
+                        },
+                        {
+                            "text": "жннде",
+                            "startTimeMs": "13559",
+                            "endTimeMs": "13860"
+                        },
+                        {
+                            "text": "срайыншы",
+                            "startTimeMs": "13920",
+                            "endTimeMs": "14340"
+                        },
+                        {
+                            "text": "деп",
+                            "startTimeMs": "14380",
+                            "endTimeMs": "14519"
+                        },
+                        {
+                            "text": "едім",
+                            "startTimeMs": "14559",
+                            "endTimeMs": "14860"
+                        },
+                        {
+                            "text": "менің",
+                            "startTimeMs": "14960",
+                            "endTimeMs": "15139"
+                        },
+                        {
+                            "text": "кредитім",
+                            "startTimeMs": "15179",
+                            "endTimeMs": "15660"
+                        },
+                        {
+                            "text": "бір",
+                            "startTimeMs": "15719",
+                            "endTimeMs": "15799"
+                        },
+                        {
+                            "text": "ай",
+                            "startTimeMs": "15820",
+                            "endTimeMs": "16000"
+                        },
+                        {
+                            "text": "болды",
+                            "startTimeMs": "16059",
+                            "endTimeMs": "16299"
+                        },
+                        {
+                            "text": "ғой",
+                            "startTimeMs": "16359",
+                            "endTimeMs": "16600"
+                        },
+                        {
+                            "text": "он",
+                            "startTimeMs": "16500",
+                            "endTimeMs": "17060"
+                        },
+                        {
+                            "text": "жеті",
+                            "startTimeMs": "17100",
+                            "endTimeMs": "17320"
+                        },
+                        {
+                            "text": "күн",
+                            "startTimeMs": "17359",
+                            "endTimeMs": "17520"
+                        },
+                        {
+                            "text": "болды",
+                            "startTimeMs": "17560",
+                            "endTimeMs": "17859"
+                        },
+                        {
+                            "text": "төлей",
+                            "startTimeMs": "17920",
+                            "endTimeMs": "18140"
+                        },
+                        {
+                            "text": "алмай",
+                            "startTimeMs": "18160",
+                            "endTimeMs": "18420"
+                        },
+                        {
+                            "text": "жатырмын",
+                            "startTimeMs": "18480",
+                            "endTimeMs": "18960"
+                        }
+                    ],
+                    "text": "кредит жннде срайыншы деп едім менің кредитім бір ай болды ғой он жеті күн болды төлей алмай жатырмын",
+                    "startTimeMs": "11740",
+                    "endTimeMs": "18960",
+                    "languages": [
+                        {
+                            "languageCode": "kk-KK",
+                            "probability": 0.9295094609260559
+                        },
+                        {
+                            "languageCode": "ru-RU",
+                            "probability": 0.07049055397510529
+                        }
+                    ]
+                }
+            ],
+            "channelTag": "0"
+        },
+        "channelTag": "0"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "18960",
+            "finalTimeMs": "18960",
+            "finalIndex": "1",
+            "eouTimeMs": "11740"
+        },
+        "responseWallTimeMs": "1625",
+        "finalRefinement": {
+            "finalIndex": "1",
+            "normalizedText": {
+                "alternatives": [
+                    {
+                        "words": [
+                            {
+                                "text": "кредит",
+                                "startTimeMs": "13059",
+                                "endTimeMs": "13519"
+                            },
+                            {
+                                "text": "жннде",
+                                "startTimeMs": "13559",
+                                "endTimeMs": "13860"
+                            },
+                            {
+                                "text": "срайыншы",
+                                "startTimeMs": "13920",
+                                "endTimeMs": "14340"
+                            },
+                            {
+                                "text": "деп",
+                                "startTimeMs": "14380",
+                                "endTimeMs": "14519"
+                            },
+                            {
+                                "text": "едім",
+                                "startTimeMs": "14559",
+                                "endTimeMs": "14860"
+                            },
+                            {
+                                "text": "менің",
+                                "startTimeMs": "14960",
+                                "endTimeMs": "15139"
+                            },
+                            {
+                                "text": "кредитім",
+                                "startTimeMs": "15179",
+                                "endTimeMs": "15660"
+                            },
+                            {
+                                "text": "бір",
+                                "startTimeMs": "15719",
+                                "endTimeMs": "15799"
+                            },
+                            {
+                                "text": "ай",
+                                "startTimeMs": "15820",
+                                "endTimeMs": "16000"
+                            },
+                            {
+                                "text": "болды",
+                                "startTimeMs": "16059",
+                                "endTimeMs": "16299"
+                            },
+                            {
+                                "text": "ғой",
+                                "startTimeMs": "16359",
+                                "endTimeMs": "16600"
+                            },
+                            {
+                                "text": "он",
+                                "startTimeMs": "16500",
+                                "endTimeMs": "17060"
+                            },
+                            {
+                                "text": "жеті",
+                                "startTimeMs": "17100",
+                                "endTimeMs": "17320"
+                            },
+                            {
+                                "text": "күн",
+                                "startTimeMs": "17359",
+                                "endTimeMs": "17520"
+                            },
+                            {
+                                "text": "болды",
+                                "startTimeMs": "17560",
+                                "endTimeMs": "17859"
+                            },
+                            {
+                                "text": "төлей",
+                                "startTimeMs": "17920",
+                                "endTimeMs": "18140"
+                            },
+                            {
+                                "text": "алмай",
+                                "startTimeMs": "18160",
+                                "endTimeMs": "18420"
+                            },
+                            {
+                                "text": "жатырмын",
+                                "startTimeMs": "18480",
+                                "endTimeMs": "18960"
+                            }
+                        ],
+                        "text": "кредит жннде срайыншы деп едім менің кредитім бір ай болды ғой он жеті күн болды төлей алмай жатырмын",
+                        "startTimeMs": "11740",
+                        "endTimeMs": "18960",
+                        "languages": [
+                            {
+                                "languageCode": "kk-KK",
+                                "probability": 0.9295094609260559
+                            },
+                            {
+                                "languageCode": "ru-RU",
+                                "probability": 0.07049055397510529
+                            }
+                        ]
+                    }
+                ],
+                "channelTag": "0"
+            }
+        },
+        "channelTag": "0"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "18960",
+            "finalTimeMs": "18960",
+            "finalIndex": "1",
+            "eouTimeMs": "18960"
+        },
+        "responseWallTimeMs": "1625",
+        "eouUpdate": {
+            "timeMs": "18960"
+        },
+        "channelTag": "0"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "26400",
+            "finalTimeMs": "26400",
+            "finalIndex": "2",
+            "eouTimeMs": "18960"
+        },
+        "responseWallTimeMs": "1625",
+        "final": {
+            "alternatives": [
+                {
+                    "words": [
+                        {
+                            "text": "соны",
+                            "startTimeMs": "21109",
+                            "endTimeMs": "21539"
+                        },
+                        {
+                            "text": "маан",
+                            "startTimeMs": "21600",
+                            "endTimeMs": "21980"
+                        },
+                        {
+                            "text": "смс",
+                            "startTimeMs": "22119",
+                            "endTimeMs": "22500"
+                        },
+                        {
+                            "text": "келп",
+                            "startTimeMs": "22560",
+                            "endTimeMs": "22820"
+                        },
+                        {
+                            "text": "тр",
+                            "startTimeMs": "22840",
+                            "endTimeMs": "22960"
+                        },
+                        {
+                            "text": "да",
+                            "startTimeMs": "23000",
+                            "endTimeMs": "23140"
+                        },
+                        {
+                            "text": "что",
+                            "startTimeMs": "23199",
+                            "endTimeMs": "23529"
+                        },
+                        {
+                            "text": "форте",
+                            "startTimeMs": "24519",
+                            "endTimeMs": "24840"
+                        },
+                        {
+                            "text": "банкке",
+                            "startTimeMs": "24880",
+                            "endTimeMs": "25300"
+                        },
+                        {
+                            "text": "хабарласыңыз",
+                            "startTimeMs": "25359",
+                            "endTimeMs": "26140"
+                        },
+                        {
+                            "text": "деп",
+                            "startTimeMs": "26199",
+                            "endTimeMs": "26400"
+                        }
+                    ],
+                    "text": "соны маан смс келп тр да что форте банкке хабарласыңыз деп",
+                    "startTimeMs": "18960",
+                    "endTimeMs": "26400",
+                    "languages": [
+                        {
+                            "languageCode": "kk-KK",
+                            "probability": 0.7206211686134338
+                        },
+                        {
+                            "languageCode": "ru-RU",
+                            "probability": 0.2793788015842438
+                        }
+                    ]
+                }
+            ],
+            "channelTag": "0"
+        },
+        "channelTag": "0"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "26400",
+            "finalTimeMs": "26400",
+            "finalIndex": "2",
+            "eouTimeMs": "18960"
+        },
+        "responseWallTimeMs": "1625",
+        "finalRefinement": {
+            "finalIndex": "2",
+            "normalizedText": {
+                "alternatives": [
+                    {
+                        "words": [
+                            {
+                                "text": "соны",
+                                "startTimeMs": "21109",
+                                "endTimeMs": "21539"
+                            },
+                            {
+                                "text": "маан",
+                                "startTimeMs": "21600",
+                                "endTimeMs": "21980"
+                            },
+                            {
+                                "text": "смс",
+                                "startTimeMs": "22119",
+                                "endTimeMs": "22500"
+                            },
+                            {
+                                "text": "келп",
+                                "startTimeMs": "22560",
+                                "endTimeMs": "22820"
+                            },
+                            {
+                                "text": "тр",
+                                "startTimeMs": "22840",
+                                "endTimeMs": "22960"
+                            },
+                            {
+                                "text": "да",
+                                "startTimeMs": "23000",
+                                "endTimeMs": "23140"
+                            },
+                            {
+                                "text": "что",
+                                "startTimeMs": "23199",
+                                "endTimeMs": "23529"
+                            },
+                            {
+                                "text": "форте",
+                                "startTimeMs": "24519",
+                                "endTimeMs": "24840"
+                            },
+                            {
+                                "text": "банкке",
+                                "startTimeMs": "24880",
+                                "endTimeMs": "25300"
+                            },
+                            {
+                                "text": "хабарласыңыз",
+                                "startTimeMs": "25359",
+                                "endTimeMs": "26140"
+                            },
+                            {
+                                "text": "деп",
+                                "startTimeMs": "26199",
+                                "endTimeMs": "26400"
+                            }
+                        ],
+                        "text": "соны маан смс келп тр да что форте банкке хабарласыңыз деп",
+                        "startTimeMs": "18960",
+                        "endTimeMs": "26400",
+                        "languages": [
+                            {
+                                "languageCode": "kk-KK",
+                                "probability": 0.7206211686134338
+                            },
+                            {
+                                "languageCode": "ru-RU",
+                                "probability": 0.2793788015842438
+                            }
+                        ]
+                    }
+                ],
+                "channelTag": "0"
+            }
+        },
+        "channelTag": "0"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "26400",
+            "finalTimeMs": "26400",
+            "finalIndex": "2",
+            "eouTimeMs": "26400"
+        },
+        "responseWallTimeMs": "1626",
+        "eouUpdate": {
+            "timeMs": "26400"
+        },
+        "channelTag": "0"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "34280",
+            "finalTimeMs": "34280",
+            "finalIndex": "2",
+            "eouTimeMs": "12300"
+        },
+        "responseWallTimeMs": "1626",
+        "final": {
+            "alternatives": [
+                {
+                    "words": [
+                        {
+                            "text": "анар",
+                            "startTimeMs": "26859",
+                            "endTimeMs": "27140"
+                        },
+                        {
+                            "text": "сзз",
+                            "startTimeMs": "27180",
+                            "endTimeMs": "27519"
+                        },
+                        {
+                            "text": "блгенмен",
+                            "startTimeMs": "27779",
+                            "endTimeMs": "28140"
+                        },
+                        {
+                            "text": "кешрм",
+                            "startTimeMs": "28180",
+                            "endTimeMs": "28439"
+                        },
+                        {
+                            "text": "сйледм",
+                            "startTimeMs": "28480",
+                            "endTimeMs": "28619"
+                        },
+                        {
+                            "text": "сз",
+                            "startTimeMs": "28660",
+                            "endTimeMs": "28779"
+                        },
+                        {
+                            "text": "айтадан",
+                            "startTimeMs": "28840",
+                            "endTimeMs": "29099"
+                        },
+                        {
+                            "text": "контакт",
+                            "startTimeMs": "29119",
+                            "endTimeMs": "29380"
+                        },
+                        {
+                            "text": "центрға",
+                            "startTimeMs": "29400",
+                            "endTimeMs": "29720"
+                        },
+                        {
+                            "text": "түсіп",
+                            "startTimeMs": "29760",
+                            "endTimeMs": "30140"
+                        },
+                        {
+                            "text": "тұрсыз",
+                            "startTimeMs": "30179",
+                            "endTimeMs": "30439"
+                        },
+                        {
+                            "text": "ғой",
+                            "startTimeMs": "30500",
+                            "endTimeMs": "30679"
+                        },
+                        {
+                            "text": "сізге",
+                            "startTimeMs": "31619",
+                            "endTimeMs": "31840"
+                        },
+                        {
+                            "text": "жаңағы",
+                            "startTimeMs": "31900",
+                            "endTimeMs": "32200"
+                        },
+                        {
+                            "text": "ішкі",
+                            "startTimeMs": "32230",
+                            "endTimeMs": "32460"
+                        },
+                        {
+                            "text": "нөмірді",
+                            "startTimeMs": "32500",
+                            "endTimeMs": "32860"
+                        },
+                        {
+                            "text": "теру",
+                            "startTimeMs": "32920",
+                            "endTimeMs": "33120"
+                        },
+                        {
+                            "text": "керек",
+                            "startTimeMs": "33140",
+                            "endTimeMs": "33320"
+                        },
+                        {
+                            "text": "жаңа",
+                            "startTimeMs": "33360",
+                            "endTimeMs": "33559"
+                        },
+                        {
+                            "text": "сізге",
+                            "startTimeMs": "33600",
+                            "endTimeMs": "33780"
+                        },
+                        {
+                            "text": "ішкі",
+                            "startTimeMs": "33829",
+                            "endTimeMs": "34020"
+                        },
+                        {
+                            "text": "нөмір",
+                            "startTimeMs": "34059",
+                            "endTimeMs": "34280"
+                        }
+                    ],
+                    "text": "анар сзз блгенмен кешрм сйледм сз айтадан контакт центрға түсіп тұрсыз ғой сізге жаңағы ішкі нөмірді теру керек жаңа сізге ішкі нөмір",
+                    "startTimeMs": "12300",
+                    "endTimeMs": "34280",
+                    "languages": [
+                        {
+                            "languageCode": "kk-KK",
+                            "probability": 0.7118527293205261
+                        },
+                        {
+                            "languageCode": "ru-RU",
+                            "probability": 0.28814730048179626
+                        }
+                    ]
+                }
+            ],
+            "channelTag": "1"
+        },
+        "channelTag": "1"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "34280",
+            "finalTimeMs": "34280",
+            "finalIndex": "2",
+            "eouTimeMs": "12300"
+        },
+        "responseWallTimeMs": "1626",
+        "finalRefinement": {
+            "finalIndex": "2",
+            "normalizedText": {
+                "alternatives": [
+                    {
+                        "words": [
+                            {
+                                "text": "анар",
+                                "startTimeMs": "26859",
+                                "endTimeMs": "27140"
+                            },
+                            {
+                                "text": "сзз",
+                                "startTimeMs": "27180",
+                                "endTimeMs": "27519"
+                            },
+                            {
+                                "text": "блгенмен",
+                                "startTimeMs": "27779",
+                                "endTimeMs": "28140"
+                            },
+                            {
+                                "text": "кешрм",
+                                "startTimeMs": "28180",
+                                "endTimeMs": "28439"
+                            },
+                            {
+                                "text": "сйледм",
+                                "startTimeMs": "28480",
+                                "endTimeMs": "28619"
+                            },
+                            {
+                                "text": "сз",
+                                "startTimeMs": "28660",
+                                "endTimeMs": "28779"
+                            },
+                            {
+                                "text": "айтадан",
+                                "startTimeMs": "28840",
+                                "endTimeMs": "29099"
+                            },
+                            {
+                                "text": "контакт",
+                                "startTimeMs": "29119",
+                                "endTimeMs": "29380"
+                            },
+                            {
+                                "text": "центрға",
+                                "startTimeMs": "29400",
+                                "endTimeMs": "29720"
+                            },
+                            {
+                                "text": "түсіп",
+                                "startTimeMs": "29760",
+                                "endTimeMs": "30140"
+                            },
+                            {
+                                "text": "тұрсыз",
+                                "startTimeMs": "30179",
+                                "endTimeMs": "30439"
+                            },
+                            {
+                                "text": "ғой",
+                                "startTimeMs": "30500",
+                                "endTimeMs": "30679"
+                            },
+                            {
+                                "text": "сізге",
+                                "startTimeMs": "31619",
+                                "endTimeMs": "31840"
+                            },
+                            {
+                                "text": "жаңағы",
+                                "startTimeMs": "31900",
+                                "endTimeMs": "32200"
+                            },
+                            {
+                                "text": "ішкі",
+                                "startTimeMs": "32230",
+                                "endTimeMs": "32460"
+                            },
+                            {
+                                "text": "нөмірді",
+                                "startTimeMs": "32500",
+                                "endTimeMs": "32860"
+                            },
+                            {
+                                "text": "теру",
+                                "startTimeMs": "32920",
+                                "endTimeMs": "33120"
+                            },
+                            {
+                                "text": "керек",
+                                "startTimeMs": "33140",
+                                "endTimeMs": "33320"
+                            },
+                            {
+                                "text": "жаңа",
+                                "startTimeMs": "33360",
+                                "endTimeMs": "33559"
+                            },
+                            {
+                                "text": "сізге",
+                                "startTimeMs": "33600",
+                                "endTimeMs": "33780"
+                            },
+                            {
+                                "text": "ішкі",
+                                "startTimeMs": "33829",
+                                "endTimeMs": "34020"
+                            },
+                            {
+                                "text": "нөмір",
+                                "startTimeMs": "34059",
+                                "endTimeMs": "34280"
+                            }
+                        ],
+                        "text": "анар сзз блгенмен кешрм сйледм сз айтадан контакт центрға түсіп тұрсыз ғой сізге жаңағы ішкі нөмірді теру керек жаңа сізге ішкі нөмір",
+                        "startTimeMs": "12300",
+                        "endTimeMs": "34280",
+                        "languages": [
+                            {
+                                "languageCode": "kk-KK",
+                                "probability": 0.7118527293205261
+                            },
+                            {
+                                "languageCode": "ru-RU",
+                                "probability": 0.28814730048179626
+                            }
+                        ]
+                    }
+                ],
+                "channelTag": "1"
+            }
+        },
+        "channelTag": "1"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "34280",
+            "finalTimeMs": "34280",
+            "finalIndex": "2",
+            "eouTimeMs": "34280"
+        },
+        "responseWallTimeMs": "1626",
+        "eouUpdate": {
+            "timeMs": "34280"
+        },
+        "channelTag": "1"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "36780",
+            "finalTimeMs": "36780",
+            "finalIndex": "3",
+            "eouTimeMs": "26400"
+        },
+        "responseWallTimeMs": "1626",
+        "final": {
+            "alternatives": [
+                {
+                    "words": [
+                        {
+                            "text": "береді",
+                            "startTimeMs": "34340",
+                            "endTimeMs": "34620"
+                        },
+                        {
+                            "text": "ғой",
+                            "startTimeMs": "34649",
+                            "endTimeMs": "34880"
+                        },
+                        {
+                            "text": "отыз",
+                            "startTimeMs": "34980",
+                            "endTimeMs": "35260"
+                        },
+                        {
+                            "text": "үш",
+                            "startTimeMs": "35370",
+                            "endTimeMs": "35480"
+                        },
+                        {
+                            "text": "жүз",
+                            "startTimeMs": "35579",
+                            "endTimeMs": "35739"
+                        },
+                        {
+                            "text": "қырық",
+                            "startTimeMs": "35800",
+                            "endTimeMs": "36000"
+                        },
+                        {
+                            "text": "тоғыз",
+                            "startTimeMs": "36040",
+                            "endTimeMs": "36320"
+                        },
+                        {
+                            "text": "деп",
+                            "startTimeMs": "36360",
+                            "endTimeMs": "36780"
+                        }
+                    ],
+                    "text": "береді ғой отыз үш жүз қырық тоғыз деп",
+                    "startTimeMs": "26400",
+                    "endTimeMs": "36780",
+                    "languages": [
+                        {
+                            "languageCode": "kk-KK",
+                            "probability": 0.9504430890083313
+                        },
+                        {
+                            "languageCode": "ru-RU",
+                            "probability": 0.04955688491463661
+                        }
+                    ]
+                }
+            ],
+            "channelTag": "0"
+        },
+        "channelTag": "0"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "36780",
+            "finalTimeMs": "36780",
+            "finalIndex": "3",
+            "eouTimeMs": "26400"
+        },
+        "responseWallTimeMs": "1626",
+        "finalRefinement": {
+            "finalIndex": "3",
+            "normalizedText": {
+                "alternatives": [
+                    {
+                        "words": [
+                            {
+                                "text": "береді",
+                                "startTimeMs": "34340",
+                                "endTimeMs": "34620"
+                            },
+                            {
+                                "text": "ғой",
+                                "startTimeMs": "34649",
+                                "endTimeMs": "34880"
+                            },
+                            {
+                                "text": "отыз",
+                                "startTimeMs": "34980",
+                                "endTimeMs": "35260"
+                            },
+                            {
+                                "text": "үш",
+                                "startTimeMs": "35370",
+                                "endTimeMs": "35480"
+                            },
+                            {
+                                "text": "жүз",
+                                "startTimeMs": "35579",
+                                "endTimeMs": "35739"
+                            },
+                            {
+                                "text": "қырық",
+                                "startTimeMs": "35800",
+                                "endTimeMs": "36000"
+                            },
+                            {
+                                "text": "тоғыз",
+                                "startTimeMs": "36040",
+                                "endTimeMs": "36320"
+                            },
+                            {
+                                "text": "деп",
+                                "startTimeMs": "36360",
+                                "endTimeMs": "36780"
+                            }
+                        ],
+                        "text": "береді ғой отыз үш жүз қырық тоғыз деп",
+                        "startTimeMs": "26400",
+                        "endTimeMs": "36780",
+                        "languages": [
+                            {
+                                "languageCode": "kk-KK",
+                                "probability": 0.9504430890083313
+                            },
+                            {
+                                "languageCode": "ru-RU",
+                                "probability": 0.04955688491463661
+                            }
+                        ]
+                    }
+                ],
+                "channelTag": "0"
+            }
+        },
+        "channelTag": "0"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "36780",
+            "finalTimeMs": "36780",
+            "finalIndex": "3",
+            "eouTimeMs": "36780"
+        },
+        "responseWallTimeMs": "1627",
+        "eouUpdate": {
+            "timeMs": "36780"
+        },
+        "channelTag": "0"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "45239",
+            "finalTimeMs": "45239",
+            "finalIndex": "3",
+            "eouTimeMs": "34280"
+        },
+        "responseWallTimeMs": "1627",
+        "final": {
+            "alternatives": [
+                {
+                    "words": [
+                        {
+                            "text": "теңге",
+                            "startTimeMs": "36860",
+                            "endTimeMs": "37160"
+                        },
+                        {
+                            "text": "ғой",
+                            "startTimeMs": "37180",
+                            "endTimeMs": "37260"
+                        },
+                        {
+                            "text": "иә",
+                            "startTimeMs": "37320",
+                            "endTimeMs": "37440"
+                        },
+                        {
+                            "text": "иә",
+                            "startTimeMs": "37440",
+                            "endTimeMs": "37559"
+                        },
+                        {
+                            "text": "саған",
+                            "startTimeMs": "38920",
+                            "endTimeMs": "39160"
+                        },
+                        {
+                            "text": "тоғыздан",
+                            "startTimeMs": "39210",
+                            "endTimeMs": "39620"
+                        },
+                        {
+                            "text": "бастап",
+                            "startTimeMs": "39640",
+                            "endTimeMs": "39920"
+                        },
+                        {
+                            "text": "звандайсыз",
+                            "startTimeMs": "39980",
+                            "endTimeMs": "40379"
+                        },
+                        {
+                            "text": "ғой",
+                            "startTimeMs": "40399",
+                            "endTimeMs": "40559"
+                        },
+                        {
+                            "text": "сағат",
+                            "startTimeMs": "40610",
+                            "endTimeMs": "40820"
+                        },
+                        {
+                            "text": "тоғыздан",
+                            "startTimeMs": "40840",
+                            "endTimeMs": "41180"
+                        },
+                        {
+                            "text": "бастап",
+                            "startTimeMs": "41200",
+                            "endTimeMs": "41489"
+                        },
+                        {
+                            "text": "звондамасаңыз",
+                            "startTimeMs": "41520",
+                            "endTimeMs": "42180"
+                        },
+                        {
+                            "text": "тоғыздан",
+                            "startTimeMs": "42980",
+                            "endTimeMs": "43379"
+                        },
+                        {
+                            "text": "кешкі",
+                            "startTimeMs": "43399",
+                            "endTimeMs": "43610"
+                        },
+                        {
+                            "text": "сағат",
+                            "startTimeMs": "43640",
+                            "endTimeMs": "43820"
+                        },
+                        {
+                            "text": "алтыға",
+                            "startTimeMs": "43860",
+                            "endTimeMs": "44040"
+                        },
+                        {
+                            "text": "дейін",
+                            "startTimeMs": "44059",
+                            "endTimeMs": "44200"
+                        },
+                        {
+                            "text": "жұмыс",
+                            "startTimeMs": "44219",
+                            "endTimeMs": "44379"
+                        },
+                        {
+                            "text": "жасайды",
+                            "startTimeMs": "44420",
+                            "endTimeMs": "44780"
+                        },
+                        {
+                            "text": "иә",
+                            "startTimeMs": "45200",
+                            "endTimeMs": "45239"
+                        }
+                    ],
+                    "text": "теңге ғой иә иә саған тоғыздан бастап звандайсыз ғой сағат тоғыздан бастап звондамасаңыз тоғыздан кешкі сағат алтыға дейін жұмыс жасайды иә",
+                    "startTimeMs": "34280",
+                    "endTimeMs": "45239",
+                    "languages": [
+                        {
+                            "languageCode": "kk-KK",
+                            "probability": 0.9889494776725769
+                        },
+                        {
+                            "languageCode": "ru-RU",
+                            "probability": 0.011050520464777946
+                        }
+                    ]
+                }
+            ],
+            "channelTag": "1"
+        },
+        "channelTag": "1"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "45239",
+            "finalTimeMs": "45239",
+            "finalIndex": "3",
+            "eouTimeMs": "34280"
+        },
+        "responseWallTimeMs": "1627",
+        "finalRefinement": {
+            "finalIndex": "3",
+            "normalizedText": {
+                "alternatives": [
+                    {
+                        "words": [
+                            {
+                                "text": "теңге",
+                                "startTimeMs": "36860",
+                                "endTimeMs": "37160"
+                            },
+                            {
+                                "text": "ғой",
+                                "startTimeMs": "37180",
+                                "endTimeMs": "37260"
+                            },
+                            {
+                                "text": "иә",
+                                "startTimeMs": "37320",
+                                "endTimeMs": "37440"
+                            },
+                            {
+                                "text": "иә",
+                                "startTimeMs": "37440",
+                                "endTimeMs": "37559"
+                            },
+                            {
+                                "text": "саған",
+                                "startTimeMs": "38920",
+                                "endTimeMs": "39160"
+                            },
+                            {
+                                "text": "тоғыздан",
+                                "startTimeMs": "39210",
+                                "endTimeMs": "39620"
+                            },
+                            {
+                                "text": "бастап",
+                                "startTimeMs": "39640",
+                                "endTimeMs": "39920"
+                            },
+                            {
+                                "text": "звандайсыз",
+                                "startTimeMs": "39980",
+                                "endTimeMs": "40379"
+                            },
+                            {
+                                "text": "ғой",
+                                "startTimeMs": "40399",
+                                "endTimeMs": "40559"
+                            },
+                            {
+                                "text": "сағат",
+                                "startTimeMs": "40610",
+                                "endTimeMs": "40820"
+                            },
+                            {
+                                "text": "тоғыздан",
+                                "startTimeMs": "40840",
+                                "endTimeMs": "41180"
+                            },
+                            {
+                                "text": "бастап",
+                                "startTimeMs": "41200",
+                                "endTimeMs": "41489"
+                            },
+                            {
+                                "text": "звондамасаңыз",
+                                "startTimeMs": "41520",
+                                "endTimeMs": "42180"
+                            },
+                            {
+                                "text": "тоғыздан",
+                                "startTimeMs": "42980",
+                                "endTimeMs": "43379"
+                            },
+                            {
+                                "text": "кешкі",
+                                "startTimeMs": "43399",
+                                "endTimeMs": "43610"
+                            },
+                            {
+                                "text": "сағат",
+                                "startTimeMs": "43640",
+                                "endTimeMs": "43820"
+                            },
+                            {
+                                "text": "алтыға",
+                                "startTimeMs": "43860",
+                                "endTimeMs": "44040"
+                            },
+                            {
+                                "text": "дейін",
+                                "startTimeMs": "44059",
+                                "endTimeMs": "44200"
+                            },
+                            {
+                                "text": "жұмыс",
+                                "startTimeMs": "44219",
+                                "endTimeMs": "44379"
+                            },
+                            {
+                                "text": "жасайды",
+                                "startTimeMs": "44420",
+                                "endTimeMs": "44780"
+                            },
+                            {
+                                "text": "иә",
+                                "startTimeMs": "45200",
+                                "endTimeMs": "45239"
+                            }
+                        ],
+                        "text": "теңге ғой иә иә саған тоғыздан бастап звандайсыз ғой сағат тоғыздан бастап звондамасаңыз тоғыздан кешкі сағат алтыға дейін жұмыс жасайды иә",
+                        "startTimeMs": "34280",
+                        "endTimeMs": "45239",
+                        "languages": [
+                            {
+                                "languageCode": "kk-KK",
+                                "probability": 0.9889494776725769
+                            },
+                            {
+                                "languageCode": "ru-RU",
+                                "probability": 0.011050520464777946
+                            }
+                        ]
+                    }
+                ],
+                "channelTag": "1"
+            }
+        },
+        "channelTag": "1"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "45239",
+            "finalTimeMs": "45239",
+            "finalIndex": "3",
+            "eouTimeMs": "45239"
+        },
+        "responseWallTimeMs": "1627",
+        "eouUpdate": {
+            "timeMs": "45239"
+        },
+        "channelTag": "1"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "46090",
+            "finalTimeMs": "46090",
+            "finalIndex": "4",
+            "eouTimeMs": "36780"
+        },
+        "responseWallTimeMs": "1627",
+        "final": {
+            "alternatives": [
+                {
+                    "words": [
+                        {
+                            "text": "хорошо",
+                            "startTimeMs": "45690",
+                            "endTimeMs": "46090"
+                        }
+                    ],
+                    "text": "хорошо",
+                    "startTimeMs": "36780",
+                    "endTimeMs": "46090",
+                    "languages": [
+                        {
+                            "languageCode": "kk-KK",
+                            "probability": 0.5377697944641113
+                        },
+                        {
+                            "languageCode": "ru-RU",
+                            "probability": 0.46223020553588867
+                        }
+                    ]
+                }
+            ],
+            "channelTag": "0"
+        },
+        "channelTag": "0"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "46090",
+            "finalTimeMs": "46090",
+            "finalIndex": "4",
+            "eouTimeMs": "36780"
+        },
+        "responseWallTimeMs": "1627",
+        "finalRefinement": {
+            "finalIndex": "4",
+            "normalizedText": {
+                "alternatives": [
+                    {
+                        "words": [
+                            {
+                                "text": "хорошо",
+                                "startTimeMs": "45690",
+                                "endTimeMs": "46090"
+                            }
+                        ],
+                        "text": "хорошо",
+                        "startTimeMs": "36780",
+                        "endTimeMs": "46090",
+                        "languages": [
+                            {
+                                "languageCode": "kk-KK",
+                                "probability": 0.5377697944641113
+                            },
+                            {
+                                "languageCode": "ru-RU",
+                                "probability": 0.46223020553588867
+                            }
+                        ]
+                    }
+                ],
+                "channelTag": "0"
+            }
+        },
+        "channelTag": "0"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "46090",
+            "finalTimeMs": "46090",
+            "finalIndex": "4",
+            "eouTimeMs": "46090"
+        },
+        "responseWallTimeMs": "1627",
+        "eouUpdate": {
+            "timeMs": "46090"
+        },
+        "channelTag": "0"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "48620",
+            "finalTimeMs": "48620",
+            "finalIndex": "4",
+            "eouTimeMs": "45239"
+        },
+        "responseWallTimeMs": "1628",
+        "final": {
+            "alternatives": [
+                {
+                    "words": [
+                        {
+                            "text": "рахмет",
+                            "startTimeMs": "46140",
+                            "endTimeMs": "46450"
+                        },
+                        {
+                            "text": "қазір",
+                            "startTimeMs": "46500",
+                            "endTimeMs": "46710"
+                        },
+                        {
+                            "text": "үш",
+                            "startTimeMs": "46739",
+                            "endTimeMs": "46820"
+                        },
+                        {
+                            "text": "төрт",
+                            "startTimeMs": "46860",
+                            "endTimeMs": "47010"
+                        },
+                        {
+                            "text": "мың",
+                            "startTimeMs": "47059",
+                            "endTimeMs": "47160"
+                        },
+                        {
+                            "text": "теңге",
+                            "startTimeMs": "47180",
+                            "endTimeMs": "47379"
+                        },
+                        {
+                            "text": "хабарлассаңыз",
+                            "startTimeMs": "47420",
+                            "endTimeMs": "48000"
+                        },
+                        {
+                            "text": "аха",
+                            "startTimeMs": "47739",
+                            "endTimeMs": "48260"
+                        },
+                        {
+                            "text": "рахмет",
+                            "startTimeMs": "48340",
+                            "endTimeMs": "48620"
+                        }
+                    ],
+                    "text": "рахмет қазір үш төрт мың теңге хабарлассаңыз аха рахмет",
+                    "startTimeMs": "45239",
+                    "endTimeMs": "48620",
+                    "languages": [
+                        {
+                            "languageCode": "kk-KK",
+                            "probability": 0.9982591867446899
+                        },
+                        {
+                            "languageCode": "ru-RU",
+                            "probability": 0.0017408172134310007
+                        }
+                    ]
+                }
+            ],
+            "channelTag": "1"
+        },
+        "channelTag": "1"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "48620",
+            "finalTimeMs": "48620",
+            "finalIndex": "4",
+            "eouTimeMs": "45239"
+        },
+        "responseWallTimeMs": "1628",
+        "finalRefinement": {
+            "finalIndex": "4",
+            "normalizedText": {
+                "alternatives": [
+                    {
+                        "words": [
+                            {
+                                "text": "рахмет",
+                                "startTimeMs": "46140",
+                                "endTimeMs": "46450"
+                            },
+                            {
+                                "text": "қазір",
+                                "startTimeMs": "46500",
+                                "endTimeMs": "46710"
+                            },
+                            {
+                                "text": "үш",
+                                "startTimeMs": "46739",
+                                "endTimeMs": "46820"
+                            },
+                            {
+                                "text": "төрт",
+                                "startTimeMs": "46860",
+                                "endTimeMs": "47010"
+                            },
+                            {
+                                "text": "мың",
+                                "startTimeMs": "47059",
+                                "endTimeMs": "47160"
+                            },
+                            {
+                                "text": "теңге",
+                                "startTimeMs": "47180",
+                                "endTimeMs": "47379"
+                            },
+                            {
+                                "text": "хабарлассаңыз",
+                                "startTimeMs": "47420",
+                                "endTimeMs": "48000"
+                            },
+                            {
+                                "text": "аха",
+                                "startTimeMs": "47739",
+                                "endTimeMs": "48260"
+                            },
+                            {
+                                "text": "рахмет",
+                                "startTimeMs": "48340",
+                                "endTimeMs": "48620"
+                            }
+                        ],
+                        "text": "рахмет қазір үш төрт мың теңге хабарлассаңыз аха рахмет",
+                        "startTimeMs": "45239",
+                        "endTimeMs": "48620",
+                        "languages": [
+                            {
+                                "languageCode": "kk-KK",
+                                "probability": 0.9982591867446899
+                            },
+                            {
+                                "languageCode": "ru-RU",
+                                "probability": 0.0017408172134310007
+                            }
+                        ]
+                    }
+                ],
+                "channelTag": "1"
+            }
+        },
+        "channelTag": "1"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "48620",
+            "finalTimeMs": "48620",
+            "finalIndex": "4",
+            "eouTimeMs": "48620"
+        },
+        "responseWallTimeMs": "1628",
+        "eouUpdate": {
+            "timeMs": "48620"
+        },
+        "channelTag": "1"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "49870",
+            "finalTimeMs": "49870",
+            "finalIndex": "5",
+            "eouTimeMs": "46090"
+        },
+        "responseWallTimeMs": "1628",
+        "final": {
+            "alternatives": [
+                {
+                    "words": [
+                        {
+                            "text": "мхм",
+                            "startTimeMs": "48690",
+                            "endTimeMs": "48930"
+                        },
+                        {
+                            "text": "сау",
+                            "startTimeMs": "49280",
+                            "endTimeMs": "49399"
+                        },
+                        {
+                            "text": "болыңыз",
+                            "startTimeMs": "49460",
+                            "endTimeMs": "49870"
+                        }
+                    ],
+                    "text": "мхм сау болыңыз",
+                    "startTimeMs": "46090",
+                    "endTimeMs": "49870",
+                    "languages": [
+                        {
+                            "languageCode": "kk-KK",
+                            "probability": 0.9817872643470764
+                        },
+                        {
+                            "languageCode": "ru-RU",
+                            "probability": 0.018212758004665375
+                        }
+                    ]
+                }
+            ],
+            "channelTag": "0"
+        },
+        "channelTag": "0"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "49870",
+            "finalTimeMs": "49870",
+            "finalIndex": "5",
+            "eouTimeMs": "46090"
+        },
+        "responseWallTimeMs": "1628",
+        "finalRefinement": {
+            "finalIndex": "5",
+            "normalizedText": {
+                "alternatives": [
+                    {
+                        "words": [
+                            {
+                                "text": "мхм",
+                                "startTimeMs": "48690",
+                                "endTimeMs": "48930"
+                            },
+                            {
+                                "text": "сау",
+                                "startTimeMs": "49280",
+                                "endTimeMs": "49399"
+                            },
+                            {
+                                "text": "болыңыз",
+                                "startTimeMs": "49460",
+                                "endTimeMs": "49870"
+                            }
+                        ],
+                        "text": "мхм сау болыңыз",
+                        "startTimeMs": "46090",
+                        "endTimeMs": "49870",
+                        "languages": [
+                            {
+                                "languageCode": "kk-KK",
+                                "probability": 0.9817872643470764
+                            },
+                            {
+                                "languageCode": "ru-RU",
+                                "probability": 0.018212758004665375
+                            }
+                        ]
+                    }
+                ],
+                "channelTag": "0"
+            }
+        },
+        "channelTag": "0"
+    },
+    {
+        "sessionUuid": {
+            "uuid": "ff755d37-3031c83-16a7eeb1-44e2847b",
+            "userRequestId": "f8dp0tq036pt6b7lcm9c"
+        },
+        "audioCursors": {
+            "receivedDataMs": "53200",
+            "partialTimeMs": "49870",
+            "finalTimeMs": "49870",
+            "finalIndex": "5",
+            "eouTimeMs": "49870"
+        },
+        "responseWallTimeMs": "1628",
+        "eouUpdate": {
+            "timeMs": "49870"
+        },
+        "channelTag": "0"
+    }
+]
