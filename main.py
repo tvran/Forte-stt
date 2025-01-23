@@ -5,9 +5,9 @@ from requests_aws4auth import AWS4Auth
 import subprocess
 import sys
 
-from output.adjust_audio import convert_audio
-from output.load_file import upload_to_yandex_storage
-from output.recognize import get_request_id, fetch_recognition_results
+from adjust_audio import convert_audio
+from load_file import upload_to_yandex_storage
+from recognize import get_request_id, fetch_recognition_results
 
 from transformers import AutoModelForSequenceClassification, AutoTokenizer, TextClassificationPipeline
 
