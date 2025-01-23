@@ -1,25 +1,27 @@
-import soundfile as sf
-import numpy as np
-from scipy.signal import resample
-
 def convert_audio(audio_file_path):
     """
-    Convert audio to mono, 16kHz using soundfile and scipy
+    Converts audio file to standard format for speech recognition
     """
     converted_file_path = "converted_audio.wav"
     
-    # Read the audio file
-    data, original_sr = sf.read(audio_file_path)
-    
-    # Convert to mono if stereo
-    if len(data.shape) > 1:
-        data = data.mean(axis=1)
-    
-    # Resample to 16000 Hz
-    num_samples = int(len(data) * 16000 / original_sr)
-    resampled_data = resample(data, num_samples)
-    
-    # Write the converted audio
-    sf.write(converted_file_path, resampled_data, 16000)
-    
+    subprocess.run(
+        [
+            "ffmpeg",
+            "-i",
+            audio_file_path,  # Input file
+            "-acodec",
+            "pcm_s16le",  # Convert to 16-bit PCM
+            "-ar",
+            "16000",  # Resample to 16000 Hz
+            "-ac",
+            "1",  # Convert to mono
+            "-af",
+            "aresample=resampler=soxr",  # High-quality resampling
+            "-f",
+            "wav",  # Output format (WAV)
+            converted_file_path  # Specific output file path
+        ],
+        check=True,
+    )
+
     return converted_file_path
