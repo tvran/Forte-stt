@@ -1,6 +1,6 @@
 import grpc
 import time
-from yandex.cloud.ai.stt.v3 import stt_pb2, stt_service_pb2_grpc, stt_service_pb2
+from output.yandex.cloud.ai.stt.v3 import stt_pb2, stt_service_pb2_grpc, stt_service_pb2
 
 def get_request_id(uri, Apikey):
     cred = grpc.ssl_channel_credentials()
