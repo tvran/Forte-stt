@@ -7,3 +7,5 @@ requests-aws4auth
 protobuf
 transformers
 torch
+soundfile
+scipy
