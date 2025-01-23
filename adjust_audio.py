@@ -28,11 +28,10 @@ def convert_audio(audio_file_path):
             "-f",
             "wav",  # Output format (WAV)
             converted_file_path  # Specific output file path
-            capture_output=True,  # Capture any error output
-            text=True
-
         ],
         check=True,
+        capture_output=True,  # Capture any error output
+        text=True
     )
 
     return converted_file_path
