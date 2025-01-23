@@ -26,7 +26,10 @@ def convert_audio(audio_file_path):
             "wav",  # Output format (WAV)
             converted_file_path  # Specific output file path
         ],
+        capture_output=True,
         check=True,
     )
 
     return converted_file_path
+
+sooo = convert_audio("/Users/tvran/Downloads/Forte-stt/Аудио 3.wav")
