@@ -140,30 +140,50 @@ def step_5_sentiment_analysis(transcribed_text):
         )
         
         return placeholder
+def main():
+    st.title("Работа с аудиозаписями разговоров")
+    st.write("Загрузите аудиофайл с разговором и получите транскрипцию с анализом сентиментов.")
+    st.write("Автор: Туран Нургожин.")
 
-# Streamlit App
-st.title("Работа с аудиозаписями разговоров")
-st.write("Загрузите аудиофайл с разговором и получите транскрипцию с анализом сентиментов.")
-st.write("Автор: Туран Нургожин.")
+    # Reset button to clear previous state
+    if st.button("Начать новый анализ"):
+        for key in ['input_file', 'converted_file', 'endpoint', 'transcribed_text']:
+            if key in st.session_state:
+                del st.session_state[key]
 
-# Шаг 1: Загрузка файла
-input_file, step_1_placeholder = step_1_upload_file()
-if input_file:
-    step_1_placeholder.empty()  # Очистить элементы интерфейса для шага 1
+    # Main workflow
+    if 'input_file' not in st.session_state:
+        # Step 1: Upload File
+        input_file, step_1_placeholder = step_1_upload_file()
+        if input_file:
+            st.session_state['input_file'] = input_file
+            step_1_placeholder.empty()
 
-    # Шаг 2: Конвертация аудио
-    converted_file, step_2_placeholder = step_2_convert_audio(input_file)
-    if converted_file:
-        step_2_placeholder.empty()  # Очистить элементы интерфейса для шага 2
+    if 'input_file' in st.session_state and 'converted_file' not in st.session_state:
+        # Step 2: Convert Audio
+        converted_file, step_2_placeholder = step_2_convert_audio(st.session_state['input_file'])
+        if converted_file:
+            st.session_state['converted_file'] = converted_file
+            step_2_placeholder.empty()
 
-        # Шаг 3: Загрузка в Yandex Storage
-        endpoint, step_3_placeholder = step_3_upload_to_yandex(converted_file)
+    if 'converted_file' in st.session_state and 'endpoint' not in st.session_state:
+        # Step 3: Upload to Yandex Storage
+        endpoint, step_3_placeholder = step_3_upload_to_yandex(st.session_state['converted_file'])
         if endpoint:
-            step_3_placeholder.empty()  # Очистить элементы интерфейса для шага 3
+            st.session_state['endpoint'] = endpoint
+            step_3_placeholder.empty()
 
-            # Шаг 4: Транскрипция
-            transcribed_text, step_4_placeholder = step_4_transcription(endpoint)
-            if transcribed_text:
-                step_4_placeholder.empty()  # Очистить элементы интерфейса для шага 4
-                # Шаг 5: Анализ сентиментов
-                step_5_placeholder = step_5_sentiment_analysis(transcribed_text) 
+    if 'endpoint' in st.session_state and 'transcribed_text' not in st.session_state:
+        # Step 4: Transcription
+        transcribed_text, step_4_placeholder = step_4_transcription(st.session_state['endpoint'])
+        if transcribed_text:
+            st.session_state['transcribed_text'] = transcribed_text
+            step_4_placeholder.empty()
+
+    if 'transcribed_text' in st.session_state:
+        # Step 5: Sentiment Analysis
+        step_5_sentiment_analysis(st.session_state['transcribed_text'])
+
+# Run the main app
+if __name__ == "__main__":
+    main()
