@@ -6,5 +6,4 @@ requests
 requests-aws4auth 
 protobuf
 transformers
-PyTorch
-TensorFlow >= 2.0
+torch
