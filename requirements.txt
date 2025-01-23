@@ -5,6 +5,7 @@ grpcio-tools
 requests
 requests-aws4auth 
 protobuf
-transformers[torch]
-soundfile
+torch==2.2.0
+transformers==4.36.0
 scipy
+soundfile
