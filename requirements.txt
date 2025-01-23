@@ -5,6 +5,6 @@ grpcio-tools
 requests
 requests-aws4auth 
 protobuf
-transformers
+transformers==4.31.0
 torch
 pydub
