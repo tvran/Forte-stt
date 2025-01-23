@@ -7,9 +7,9 @@ from adjust_audio import convert_audio
 from load_file import upload_to_yandex_storage
 from recognize import get_request_id, fetch_recognition_results
 
-from transformers.models.auto.modeling_auto import AutoModelForSequenceClassification
-from transformers.models.auto.tokenization_auto import AutoTokenizer
-from transformers.pipeline import pipeline as TextClassificationPipeline
+from transformers.models.auto import AutoModelForSequenceClassification
+from transformers.models.auto import AutoTokenizer
+from transformers.pipelines import TextClassificationPipeline
 
 # Загрузка переменных окружения
 load_dotenv()
