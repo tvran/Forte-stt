@@ -1,33 +1,33 @@
+import os
 import subprocess
 
 def convert_audio(audio_file_path):
     """
     Converts any audio file to 16-bit PCM and resamples to 16000 Hz.
-
-    Args:
-        audio_file_path: The path to the input audio file.
-
-    Returns:
-        The path to the converted audio file.
     """
     converted_file_path = "converted_audio.wav"
+    
+    # Remove existing file to avoid prompts
+    if os.path.exists(converted_file_path):
+        os.remove(converted_file_path)
     
     subprocess.run(
         [
             "ffmpeg",
+            "-y",  # Overwrite output files without asking
             "-i",
-            audio_file_path,  # Input file
+            audio_file_path,
             "-acodec",
-            "pcm_s16le",  # Convert to 16-bit PCM
+            "pcm_s16le",
             "-af",
             "aresample=resampler=soxr",
             "-ar",
-            "16000",  # Resample to 16000 Hz
+            "16000",
             "-ac", 
-            "1",  # Convert to mono
+            "1",
             "-f",
-            "wav",  # Output format (WAV)
-            converted_file_path  # Specific output file path
+            "wav",
+            converted_file_path
         ],
         check=True,
     )
