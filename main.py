@@ -29,6 +29,11 @@ os.environ["OMP_NUM_THREADS"] = "1"
 if not os.path.exists(REPO_DIR):
     subprocess.run(["git", "clone", REPO_URL], check=True)
 
+def delete_temp_files():
+    temp_files = ["uploadedaudio.wav", "converted_audio.wav"]
+    for temp_file in temp_files:
+        if os.path.exists(temp_file):
+            os.remove(temp_file)
 
 # Функции для обработки шагов
 def step_1_upload_file():
@@ -200,7 +205,11 @@ def main():
         # Clear entire session state to restart from scratch
         for key in st.session_state.keys():
             del st.session_state[key]
-        st.experimental_rerun()
+
+        # Delete temporary files
+        delete_temp_files()
+
+        st.experimental_set_query_params()
 
 # Run the main app
 if __name__ == "__main__":

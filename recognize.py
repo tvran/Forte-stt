@@ -35,7 +35,7 @@ def get_request_id(uri, Apikey):
 
 def fetch_recognition_results(stub, operation_id, Apikey, timeout=60, interval=2):    
     start_time = time.time()
-    full_text = ""
+    replicas = []
 
     # Build the request for fetching recognition results
     request = stt_service_pb2.GetRecognitionRequest(operation_id=operation_id)
@@ -43,26 +43,37 @@ def fetch_recognition_results(stub, operation_id, Apikey, timeout=60, interval=2
         try:
             # Stream responses
             whole_recognition = stub.GetRecognition(request, metadata=[('authorization', f'Api-Key {Apikey}')])
-            speaker = "1"
+            
             for response in whole_recognition:
-    # Check where channel_tag exists
                 if response.HasField("final_refinement"):
-                    new_speaker = response.final_refinement.normalized_text.channel_tag  # Adjust this based on the structure
-                    if speaker == new_speaker:
-                        full_text += "\n" + "Оператор: "
-                        for alternative in response.final_refinement.normalized_text.alternatives:
-                            full_text += alternative.text + " "
-                    else:
-                        full_text += "\n" + "Клиент: "
-                        for alternative in response.final_refinement.normalized_text.alternatives:
-                            full_text += alternative.text + " "
-                else:
-                    print("No final_refinement in this response")
+                    # Extract text and channel information
+                    text = " ".join([alt.text for alt in response.final_refinement.normalized_text.alternatives])
+                    channel = response.final_refinement.normalized_text.channel_tag
+                    
+                    # Create replica object with timestamp and details
+                    replica = {
+                        'text': text,
+                        'channel': channel,
+                        'timestamp': response.final_refinement.normalized_text.start_time
+                    }
+                    replicas.append(replica)
+            
+            # Sort replicas by timestamp
+            replicas.sort(key=lambda x: x['timestamp'])
+            
+            # Construct final transcript
+            full_text = ""
+            for replica in replicas:
+                speaker = "Оператор" if replica['channel'] == "0" else "Клиент"
+                full_text += f"\n{speaker}: {replica['text']}"
+            
             return full_text.strip()
+        
         except grpc.RpcError as e:
             if e.code() == grpc.StatusCode.NOT_FOUND:
                 print(f"Operation {operation_id} is not yet ready.")
             else:
                 print(f"An error occurred: {e.code()} - {e.details()}")
             time.sleep(interval)
+    
     raise TimeoutError(f"Operation {operation_id} did not complete within {timeout} seconds.")
