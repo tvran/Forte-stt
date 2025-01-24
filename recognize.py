@@ -33,7 +33,7 @@ def get_request_id(uri, Apikey):
     operation_id = response.id
     return stub, operation_id
 
-def fetch_recognition_results(stub, operation_id, timeout=60, interval=2):    
+def fetch_recognition_results(stub, operation_id, Apikey, timeout=60, interval=2):    
     start_time = time.time()
     full_text = ""
 
@@ -42,7 +42,7 @@ def fetch_recognition_results(stub, operation_id, timeout=60, interval=2):
     while time.time() - start_time < timeout:
         try:
             # Stream responses
-            whole_recognition = stub.GetRecognition(request, metadata=[('authorization', 'Api-Key AQVN2yNJ6b2rUQp6U5smoMiBgKZeuYD8mqaKQgsj')])
+            whole_recognition = stub.GetRecognition(request, metadata=[('authorization', f'Api-Key {Apikey}')])
             speaker = "1"
             for response in whole_recognition:
     # Check where channel_tag exists

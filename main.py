@@ -87,7 +87,7 @@ def step_4_transcription(endpoint):
         st.write("### Step 3: Транскрипция аудио...")
         try:
             stub, operation_id = get_request_id(endpoint, yandex_api_key)
-            transcribed_text = fetch_recognition_results(stub, operation_id)
+            transcribed_text = fetch_recognition_results(stub, operation_id, yandex_api_key)
             st.success("Транскрипция завершена успешно.")
             st.text_area("Результат транскрипции", transcribed_text, height=300)
             return transcribed_text, placeholder
