@@ -60,7 +60,7 @@ def fetch_recognition_results(stub, operation_id, Apikey, timeout=60, interval=2
             # Construct final transcript
             full_text = ""
             for replica in replicas:
-                speaker = "Оператор" if replica['channel'] == "0" else "Клиент"
+                speaker = "Клиент" if replica['channel'] == "0" else "Оператор"
                 full_text += f"\n{speaker}: {replica['text']}"
             
             return full_text.strip()

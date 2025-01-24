@@ -17,6 +17,7 @@ def convert_audio(audio_file_path):
             "-y",  # Overwrite output files without asking
             "-i",
             audio_file_path,
+            "-ss", "00:00:03",  # Skip the first 3 seconds
             "-acodec",
             "pcm_s16le",
             "-af",
