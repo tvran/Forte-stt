@@ -50,16 +50,12 @@ def fetch_recognition_results(stub, operation_id, Apikey, timeout=60, interval=2
                     text = " ".join([alt.text for alt in response.final_refinement.normalized_text.alternatives])
                     channel = response.final_refinement.normalized_text.channel_tag
                     
-                    # Create replica object with timestamp and details
+                    # Create replica object with details
                     replica = {
                         'text': text,
-                        'channel': channel,
-                        'timestamp': response.final_refinement.normalized_text.start_time
+                        'channel': channel
                     }
                     replicas.append(replica)
-            
-            # Sort replicas by timestamp
-            replicas.sort(key=lambda x: x['timestamp'])
             
             # Construct final transcript
             full_text = ""
