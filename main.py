@@ -37,7 +37,10 @@ def step_1_upload_file():
     """
     placeholder = st.empty()
     with placeholder.container():
-        uploaded_file = st.file_uploader("Загрузите аудиофайл (mp3, wav, flac и т.д.)", type=["wav", "mp3", "flac", "aac", "ogg", "m4a"])
+        uploaded_file = st.file_uploader(
+            "Загрузите аудиофайл (mp3, wav, flac и т.д.)", 
+            type=["wav", "mp3", "flac", "aac", "ogg", "m4a"]
+            )
         if uploaded_file is not None:
             local_file = "uploadedaudio.wav"
             with open(local_file, "wb") as f:
@@ -122,16 +125,22 @@ def step_5_sentiment_analysis(transcribed_text):
         )
         pipe = TextClassificationPipeline(model=model, tokenizer=tokenizer)
         
-        # Prepare results for display and download
         results = []
         review_lines = transcribed_text.strip().split('\n')
         for i, line in enumerate(review_lines, 1):
             result = pipe(line)
-            sentiment = result[0]['label']
             score = result[0]['score']
+
+            # Determine sentiment based on score
+            if score < 0.33:
+                sentiment = 'NEGATIVE'
+            elif score > 0.66:
+                sentiment = 'POSITIVE'
+            else:
+                sentiment = 'NEUTRAL'
             
             # Format result string
-            result_str = f"{line} | Сентимент: {sentiment} ({score:.2f})\n"
+            result_str = f"{line} | Сентимент: {sentiment} ({score:.2f})"
             results.append(result_str)
         st.empty()
         st.write("### Результат:")
@@ -146,18 +155,12 @@ def step_5_sentiment_analysis(transcribed_text):
             file_name="sentiment_analysis_results.txt",
             mime="text/plain"
         )
-        
         return placeholder
+
 def main():
     st.title("Работа с аудиозаписями разговоров")
     st.write("Загрузите аудиофайл с разговором и получите транскрипцию с анализом сентиментов.")
     st.write("Автор: Туран Нургожин.")
-
-    # Reset button to clear previous state
-    if st.button("Начать новый анализ"):
-        for key in ['input_file', 'converted_file', 'endpoint', 'transcribed_text']:
-            if key in st.session_state:
-                del st.session_state[key]
 
     # Main workflow
     if 'input_file' not in st.session_state:
@@ -191,6 +194,13 @@ def main():
     if 'transcribed_text' in st.session_state:
         # Step 5: Sentiment Analysis
         step_5_sentiment_analysis(st.session_state['transcribed_text'])
+
+    # Reset button placed at the end
+    if st.button("Начать новый анализ"):
+        # Clear entire session state to restart from scratch
+        for key in st.session_state.keys():
+            del st.session_state[key]
+        st.experimental_rerun()
 
 # Run the main app
 if __name__ == "__main__":
