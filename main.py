@@ -3,6 +3,8 @@ import os
 from dotenv import load_dotenv
 from requests_aws4auth import AWS4Auth
 import subprocess
+import torch
+
 from adjust_audio import convert_audio
 from load_file import upload_to_yandex_storage
 from recognize import get_request_id, fetch_recognition_results
@@ -20,6 +22,9 @@ HF_TOKEN = os.getenv("HF_TOKEN")
 
 REPO_URL = "https://github.com/yandex-cloud/cloudapi.git"
 REPO_DIR = "cloudapi"
+
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+os.environ["OMP_NUM_THREADS"] = "1"
 
 if not os.path.exists(REPO_DIR):
     subprocess.run(["git", "clone", REPO_URL], check=True)
@@ -106,7 +111,10 @@ def step_5_sentiment_analysis(transcribed_text):
         st.write("Анализируется сентимент каждой реплики...")
         model = AutoModelForSequenceClassification.from_pretrained(
             "issai/rembert-sentiment-analysis-polarity-classification-kazakh",
-            token=HF_TOKEN
+            token=HF_TOKEN,
+            torch_dtype=torch.float32,  # Ensure float32 for CPU
+            low_cpu_mem_usage=True,  # Optimize memory usage
+            device_map="cpu"  # Explicitly set to CPU
         )
         tokenizer = AutoTokenizer.from_pretrained(
             "issai/rembert-sentiment-analysis-polarity-classification-kazakh",
