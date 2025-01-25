@@ -24,8 +24,6 @@ def convert_audio(audio_file_path):
             "aresample=resampler=soxr",
             "-ar",
             "16000",
-            "-ac", 
-            "1",
             "-f",
             "wav",
             converted_file_path
