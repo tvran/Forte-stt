@@ -142,7 +142,7 @@ def step_5_sentiment_analysis(transcribed_text):
         st.write("Анализируется сентимент каждой реплики...")
         
         # Initialize model if not already loaded
-        initialize_sentiment_model()
+        # initialize_sentiment_model()
         
         results = []
         review_lines = transcribed_text.strip().split('\n')
@@ -163,7 +163,7 @@ def step_5_sentiment_analysis(transcribed_text):
                 sentiment = 'NEUTRAL'
             
             # Format result string
-            result_str = f"{line} | Сентимент: {sentiment} ({score:.2f})"
+            result_str = f"{line} | Сентимент: {result}"
             results.append(result_str)
             
             # Update progress bar
