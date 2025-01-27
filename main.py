@@ -26,6 +26,10 @@ REPO_DIR = "cloudapi"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 os.environ["OMP_NUM_THREADS"] = "1"
 
+model = None
+tokenizer = None
+pipe = None
+
 if not os.path.exists(REPO_DIR):
     subprocess.run(["git", "clone", REPO_URL], check=True)
 
@@ -34,6 +38,27 @@ def delete_temp_files():
     for temp_file in temp_files:
         if os.path.exists(temp_file):
             os.remove(temp_file)
+
+def initialize_sentiment_model():
+    """
+    Initialize the sentiment analysis model and tokenizer once.
+    """
+    global model, tokenizer, pipe
+    
+    if model is None or tokenizer is None or pipe is None:
+        model = AutoModelForSequenceClassification.from_pretrained(
+            "issai/rembert-sentiment-analysis-polarity-classification-kazakh",
+            token=HF_TOKEN,
+            torch_dtype=torch.float32,
+            low_cpu_mem_usage=True,
+            device_map="cpu"
+        )
+        tokenizer = AutoTokenizer.from_pretrained(
+            "issai/rembert-sentiment-analysis-polarity-classification-kazakh",
+            token=HF_TOKEN
+        )
+        pipe = TextClassificationPipeline(model=model, tokenizer=tokenizer)
+
 
 def step_1_upload_file():
     """
@@ -115,21 +140,16 @@ def step_5_sentiment_analysis(transcribed_text):
     with placeholder.container():
         st.write("### Step 4: Анализ сентиментов...")
         st.write("Анализируется сентимент каждой реплики...")
-        model = AutoModelForSequenceClassification.from_pretrained(
-            "issai/rembert-sentiment-analysis-polarity-classification-kazakh",
-            token=HF_TOKEN,
-            torch_dtype=torch.float32,  # Ensure float32 for CPU
-            low_cpu_mem_usage=True,  # Optimize memory usage
-            device_map="cpu"  # Explicitly set to CPU
-        )
-        tokenizer = AutoTokenizer.from_pretrained(
-            "issai/rembert-sentiment-analysis-polarity-classification-kazakh",
-            token=HF_TOKEN
-        )
-        pipe = TextClassificationPipeline(model=model, tokenizer=tokenizer)
+        
+        # Initialize model if not already loaded
+        initialize_sentiment_model()
         
         results = []
         review_lines = transcribed_text.strip().split('\n')
+        
+        # Add a progress bar
+        progress_bar = st.progress(0)
+        
         for i, line in enumerate(review_lines, 1):
             result = pipe(line)
             score = result[0]['score']
@@ -145,7 +165,13 @@ def step_5_sentiment_analysis(transcribed_text):
             # Format result string
             result_str = f"{line} | Сентимент: {sentiment} ({score:.2f})"
             results.append(result_str)
-        st.empty()
+            
+            # Update progress bar
+            progress_bar.progress((i / len(review_lines)))
+        
+        # Clear progress bar
+        progress_bar.empty()
+        
         st.write("### Результат:")
         # Display results
         full_results = "\n".join(results)
@@ -203,5 +229,8 @@ def main():
     if 'transcribed_text' in st.session_state:
         step_5_sentiment_analysis(st.session_state['transcribed_text'])
 
+# In your main.py
 if __name__ == "__main__":
+    # Initialize the model when the app starts
+    initialize_sentiment_model()
     main()
