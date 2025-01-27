@@ -143,32 +143,42 @@ def step_5_sentiment_analysis(transcribed_text):
         
         # Initialize model if not already loaded
         initialize_sentiment_model()
-        
-        results = []
-        csv_data = []  
+
+        table_data = []  
         review_lines = transcribed_text.strip().split('\n')
         
         # Add a progress bar
         progress_bar = st.progress(0)
         
         for i, line in enumerate(review_lines, 1):
-            result = pipe(line)
+            # Split the line into speaker and text
+            if ': ' in line:
+                speaker, text = line.split(': ', 1)
+            else:
+                speaker, text = 'Unknown', line
+
+            result = pipe(text)
             label = result[0]['label']
             score = result[0]['score']
 
             # Determine sentiment based on score
-            if label == 'POSITIVE' & score > 0.66:
+            # Determine sentiment based on score
+            if label == 'POSITIVE' and score > 0.66:
                 sentiment = 'POSITIVE'
-            elif label == 'POSITIVE' & score <= 0.66:
+            elif label == 'POSITIVE' and score <= 0.66:
                 sentiment = 'NEUTRAL'
-            elif label == 'NEGATIVE' & score > 0.66:
+            elif label == 'NEGATIVE' and score > 0.66:
                 sentiment = 'NEGATIVE'
             else:
                 sentiment = 'NEUTRAL'
             
-            # Format result string
-            result_str = f"{line} | Сентимент: {sentiment} ({score:.2f})"
-            results.append(result_str)
+            # Store structured data
+            table_data.append({
+                "Говорящий": speaker,
+                "Текст": text,
+                "Сентимент": sentiment,
+                "Оценка": f"{score:.2f}"
+            })
             
             # Update progress bar
             progress_bar.progress((i / len(review_lines)))
@@ -177,18 +187,31 @@ def step_5_sentiment_analysis(transcribed_text):
         progress_bar.empty()
         
         st.write("### Результат:")
-        # Display results
-        full_results = "\n".join(results)
-        st.text_area("Результаты анализа сентиментов", full_results, height=300)
+        # Display results as a table
+        st.dataframe(
+            table_data,
+            column_config={
+                "Говорящий": st.column_config.TextColumn("Говорящий", width="medium"),
+                "Текст": st.column_config.TextColumn("Текст", width="large"),
+                "Сентимент": st.column_config.TextColumn("Сентимент", width="medium"),
+                "Оценка": st.column_config.TextColumn("Оценка", width="small")
+            },
+            hide_index=True
+        )
         
         # Create two columns for the download buttons
         col1, col2 = st.columns(2)
         
         # Text file download button in first column
         with col1:
+            # Convert table data to text format for .txt download
+            text_results = "\n".join([
+                f"{row['Говорящий']}: {row['Текст']} | Сентимент: {row['Сентимент']} ({row['Оценка']})"
+                for row in table_data
+            ])
             st.download_button(
                 label="Скачать как текст",
-                data=full_results,
+                data=text_results,
                 file_name="sentiment_analysis_results.txt",
                 mime="text/plain"
             )
@@ -201,8 +224,9 @@ def step_5_sentiment_analysis(transcribed_text):
             
             csv_output = io.StringIO()
             writer = csv.writer(csv_output)
-            writer.writerow(['Говорящий', 'Текст', 'Сентимент'])  # Header row
-            writer.writerows(csv_data)
+            writer.writerow(['Говорящий', 'Текст', 'Сентимент', 'Оценка'])  # Header row
+            for row in table_data:
+                writer.writerow([row['Говорящий'], row['Текст'], row['Сентимент'], row['Оценка']])
             
             st.download_button(
                 label="Скачать как CSV",
@@ -210,6 +234,7 @@ def step_5_sentiment_analysis(transcribed_text):
                 file_name="sentiment_analysis_results.csv",
                 mime="text/csv"
             )
+
         return placeholder
 
 def main():
