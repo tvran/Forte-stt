@@ -14,18 +14,13 @@ def convert_audio(audio_file_path):
     subprocess.run(
         [
             "ffmpeg",
-            "-y",  # Overwrite output files without asking
-            "-i", audio_file_path,
-            "-ss", "00:00:03",  # Skip first 3 seconds
-            "-acodec", "pcm_s16le",
-            "-af",
-            "aresample=resampler=soxr:out_rate=16000," +  # High-quality resampling
-            "channelsplit,volume=1.5," +  # Split channels and normalize volume
-            "lowpass=f=8000,highpass=f=200," +  # Filter out unwanted frequencies
-            "apad=pad_dur=0.1",  # Add padding to prevent cutoff
-            "-ar", "16000",
-            "-ac", "2",  # Ensure stereo output
-            "-f", "wav",
+            "-y",              # Overwrite output files without asking
+            "-i",              # Input flag
+            audio_file_path,
+            "-ss", "00:00:03", # Skip first 3 seconds
+            "-acodec", "pcm_s16le",  # Convert to 16-bit PCM
+            "-ar", "16000",    # Set sample rate to 16000 Hz
+            "-ac", "2",        # Keep stereo
             converted_file_path
         ],
         check=True,
