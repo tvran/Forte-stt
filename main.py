@@ -200,16 +200,28 @@ def main():
         # Step 5: Sentiment Analysis
         step_5_sentiment_analysis(st.session_state['transcribed_text'])
 
-    # Reset button placed at the end
+     # Reset button placed at the top (before the workflow)
     if st.button("Начать новый анализ"):
         # Clear entire session state to restart from scratch
-        for key in st.session_state.keys():
-            del st.session_state[key]
-
+        st.session_state.clear()  # Use clear() instead of manual deletion
+        
         # Delete temporary files
         delete_temp_files()
+        
+        # Update query parameters
+        st.query_params.clear()  # Use the new non-experimental API
+        
+        # Force a rerun to refresh the page
+        st.rerun()
 
-        st.experimental_set_query_params()
+    
+    # Rest of your main workflow...
+    if 'input_file' not in st.session_state:
+        # Step 1: Upload File
+        input_file, step_1_placeholder = step_1_upload_file()
+        if input_file:
+            st.session_state['input_file'] = input_file
+            step_1_placeholder.empty()
 
 # Run the main app
 if __name__ == "__main__":
