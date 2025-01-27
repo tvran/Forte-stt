@@ -43,16 +43,22 @@ def fetch_recognition_results(stub, operation_id, Apikey, timeout=60, interval=2
             
             for response in whole_recognition:
                 if response.HasField("final_refinement"):
-                    # Extract text and channel information
-                    text = " ".join([alt.text for alt in response.final_refinement.normalized_text.alternatives])
-                    channel = response.final_refinement.normalized_text.channel_tag
+                    # Extract text, channel, and timing information
+                    normalized_text = response.final_refinement.normalized_text
+                    text = " ".join([alt.text for alt in normalized_text.alternatives])
+                    channel = normalized_text.channel_tag
+                    start_time_ms = normalized_text.alternatives[0].start_time_ms if normalized_text.alternatives else 0
                     
-                    # Create replica object with details
+                    # Create replica object with timing details
                     replica = {
                         'text': text,
-                        'channel': channel
+                        'channel': channel,
+                        'start_time_ms': start_time_ms
                     }
                     replicas.append(replica)
+            
+            # Sort replicas by start time
+            replicas.sort(key=lambda x: x['start_time_ms'])
             
             # Construct final transcript
             full_text = ""
