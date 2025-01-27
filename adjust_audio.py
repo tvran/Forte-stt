@@ -15,17 +15,17 @@ def convert_audio(audio_file_path):
         [
             "ffmpeg",
             "-y",  # Overwrite output files without asking
-            "-i",
-            audio_file_path,
-            "-ss", "00:00:03",  # Skip the first 3 seconds
-            "-acodec",
-            "pcm_s16le",
+            "-i", audio_file_path,
+            "-ss", "00:00:03",  # Skip first 3 seconds
+            "-acodec", "pcm_s16le",
             "-af",
-            "aresample=resampler=soxr",
-            "-ar",
-            "16000",
-            "-f",
-            "wav",
+            "aresample=resampler=soxr:out_rate=16000," +  # High-quality resampling
+            "channelsplit,volume=1.5," +  # Split channels and normalize volume
+            "lowpass=f=8000,highpass=f=200," +  # Filter out unwanted frequencies
+            "apad=pad_dur=0.1",  # Add padding to prevent cutoff
+            "-ar", "16000",
+            "-ac", "2",  # Ensure stereo output
+            "-f", "wav",
             converted_file_path
         ],
         check=True,

@@ -35,25 +35,23 @@ def delete_temp_files():
         if os.path.exists(temp_file):
             os.remove(temp_file)
 
-# Функции для обработки шагов
 def step_1_upload_file():
     """
     Шаг 1: Загрузка файла.
     """
-    placeholder = st.empty()
-    with placeholder.container():
-        uploaded_file = st.file_uploader(
-            "Загрузите аудиофайл (mp3, wav, flac и т.д.)", 
-            type=["wav", "mp3", "flac", "aac", "ogg", "m4a"]
-            )
-        if uploaded_file is not None:
-            local_file = "uploadedaudio.wav"
-            with open(local_file, "wb") as f:
-                f.write(uploaded_file.read())
-            st.success("Файл успешно загружен.")
-            return local_file, placeholder
-    return None, placeholder
-
+    uploaded_file = st.file_uploader(
+        "Загрузите аудиофайл (mp3, wav, flac и т.д.)", 
+        type=["wav", "mp3", "flac", "aac", "ogg", "m4a"],
+        key="file_uploader"  # Add a unique key
+    )
+    
+    if uploaded_file is not None:
+        local_file = "uploadedaudio.wav"
+        with open(local_file, "wb") as f:
+            f.write(uploaded_file.read())
+        st.success("Файл успешно загружен.")
+        return local_file
+    return None
 def step_2_convert_audio(input_file):
     """
     Шаг 2: Конвертация аудио.
@@ -167,62 +165,43 @@ def main():
     st.write("Загрузите аудиофайл с разговором и получите транскрипцию с анализом сентиментов.")
     st.write("Автор: Туран Нургожин.")
 
+    # Reset button at the top
+    if st.button("Начать новый анализ", key="reset_button"):  # Add a unique key
+        # Clear temporary files
+        delete_temp_files()
+        # Clear session state
+        st.session_state.clear()
+        # Clear query params
+        st.query_params.clear()
+        # Force rerun
+        st.rerun()
+
     # Main workflow
     if 'input_file' not in st.session_state:
-        # Step 1: Upload File
-        input_file, step_1_placeholder = step_1_upload_file()
+        input_file = step_1_upload_file()  # Remove placeholder
         if input_file:
             st.session_state['input_file'] = input_file
-            step_1_placeholder.empty()
 
     if 'input_file' in st.session_state and 'converted_file' not in st.session_state:
-        # Step 2: Convert Audio
         converted_file, step_2_placeholder = step_2_convert_audio(st.session_state['input_file'])
         if converted_file:
             st.session_state['converted_file'] = converted_file
             step_2_placeholder.empty()
 
     if 'converted_file' in st.session_state and 'endpoint' not in st.session_state:
-        # Step 3: Upload to Yandex Storage
         endpoint, step_3_placeholder = step_3_upload_to_yandex(st.session_state['converted_file'])
         if endpoint:
             st.session_state['endpoint'] = endpoint
             step_3_placeholder.empty()
 
     if 'endpoint' in st.session_state and 'transcribed_text' not in st.session_state:
-        # Step 4: Transcription
         transcribed_text, step_4_placeholder = step_4_transcription(st.session_state['endpoint'])
         if transcribed_text:
             st.session_state['transcribed_text'] = transcribed_text
             step_4_placeholder.empty()
 
     if 'transcribed_text' in st.session_state:
-        # Step 5: Sentiment Analysis
         step_5_sentiment_analysis(st.session_state['transcribed_text'])
 
-     # Reset button placed at the top (before the workflow)
-    if st.button("Начать новый анализ"):
-        # Clear entire session state to restart from scratch
-        st.session_state.clear()  # Use clear() instead of manual deletion
-        
-        # Delete temporary files
-        delete_temp_files()
-        
-        # Update query parameters
-        st.query_params.clear()  # Use the new non-experimental API
-        
-        # Force a rerun to refresh the page
-        st.rerun()
-
-    
-    # Rest of your main workflow...
-    if 'input_file' not in st.session_state:
-        # Step 1: Upload File
-        input_file, step_1_placeholder = step_1_upload_file()
-        if input_file:
-            st.session_state['input_file'] = input_file
-            step_1_placeholder.empty()
-
-# Run the main app
 if __name__ == "__main__":
     main()
