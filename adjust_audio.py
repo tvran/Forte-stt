@@ -31,5 +31,5 @@ def convert_audio(audio_file_path):
         check=True,
     )
 
-    return converted_file_pathpip cache purge
+    return converted_file_path
 
