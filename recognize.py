@@ -25,9 +25,6 @@ def get_request_id(uri, Apikey):
         literature_text=True
     ),
     ),
-    speaker_labeling=stt_pb2.SpeakerLabelingOptions(
-        speaker_labeling=stt_pb2.SpeakerLabelingOptions.SPEAKER_LABELING_ENABLED
-    )
     )
     response = stub.RecognizeFile(operation_request, metadata=[('authorization', f'Api-Key {Apikey}')])
     operation_id = response.id
