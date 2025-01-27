@@ -142,9 +142,10 @@ def step_5_sentiment_analysis(transcribed_text):
         st.write("Анализируется сентимент каждой реплики...")
         
         # Initialize model if not already loaded
-        # initialize_sentiment_model()
+        initialize_sentiment_model()
         
         results = []
+        csv_data = []  
         review_lines = transcribed_text.strip().split('\n')
         
         # Add a progress bar
@@ -152,18 +153,21 @@ def step_5_sentiment_analysis(transcribed_text):
         
         for i, line in enumerate(review_lines, 1):
             result = pipe(line)
+            label = result[0]['label']
             score = result[0]['score']
 
             # Determine sentiment based on score
-            if score < 0.33:
-                sentiment = 'NEGATIVE'
-            elif score > 0.66:
+            if label == 'POSITIVE' & score > 0.66:
                 sentiment = 'POSITIVE'
+            elif label == 'POSITIVE' & score <= 0.66:
+                sentiment = 'NEUTRAL'
+            elif label == 'NEGATIVE' & score > 0.66:
+                sentiment = 'NEGATIVE'
             else:
                 sentiment = 'NEUTRAL'
             
             # Format result string
-            result_str = f"{line} | Сентимент: {result}"
+            result_str = f"{line} | Сентимент: {sentiment} ({score:.2f})"
             results.append(result_str)
             
             # Update progress bar
@@ -177,13 +181,35 @@ def step_5_sentiment_analysis(transcribed_text):
         full_results = "\n".join(results)
         st.text_area("Результаты анализа сентиментов", full_results, height=300)
         
-        # Download button
-        st.download_button(
-            label="Скачать результаты анализа",
-            data=full_results,
-            file_name="sentiment_analysis_results.txt",
-            mime="text/plain"
-        )
+        # Create two columns for the download buttons
+        col1, col2 = st.columns(2)
+        
+        # Text file download button in first column
+        with col1:
+            st.download_button(
+                label="Скачать как текст",
+                data=full_results,
+                file_name="sentiment_analysis_results.txt",
+                mime="text/plain"
+            )
+        
+        # CSV download button in second column
+        with col2:
+            # Prepare CSV data
+            import io
+            import csv
+            
+            csv_output = io.StringIO()
+            writer = csv.writer(csv_output)
+            writer.writerow(['Говорящий', 'Текст', 'Сентимент'])  # Header row
+            writer.writerows(csv_data)
+            
+            st.download_button(
+                label="Скачать как CSV",
+                data=csv_output.getvalue(),
+                file_name="sentiment_analysis_results.csv",
+                mime="text/csv"
+            )
         return placeholder
 
 def main():
